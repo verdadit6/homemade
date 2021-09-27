@@ -1,0 +1,39 @@
+Project Structure : 
+
+MVC : 
+Model 
+View 
+Controller 
+
+View : this folder / Directory contains all the screens, view,
+custom widgets or any visible or UI related part of the application.
+
+view : 
+    |-> screens
+        |-> auth
+            |-> login_screen.dart
+            |-> register_screen.dart
+            |-> forgot_password.dart
+            |-> change_password.dart
+        |-> home
+            |-> home_screens
+                |-> product_details.dart
+                |-> home_screen.dart
+            |-> search_screens 
+                |-> search_screen.dart
+            |-> chat_screens
+                |-> chat_screen.dart
+            |-> profile_screens
+                |-> profile_screen.dart
+
+    |-> widgets : all the custom widgets or commonly used widgets.
+        |-> buttons
+            |-> custom_button.dart -> CustomButton
+            |-> custom_chip.dart -> CustomChip
+        |-> input
+            |-> custom_text_field.dart -> CustomTextField
+            |-> custom_radio_button.dart -> CustomRadioButton
+            |-> custom_checkbox.dart -> CustomCheckbox
+        |-> cards 
+            |-> custom_doctor_list_tile.dart -> CustomDoctorListTile
+        |-> other
