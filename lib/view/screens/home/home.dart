@@ -36,7 +36,9 @@ class _HomeState extends State<Home> {
               HomePage(),
               SearchPage(),
               ChatPage(),
-              ProfilePage(),
+              ProfilePage(
+                isSelected: true,
+              ),
             ],
           ),
           Positioned(
@@ -44,11 +46,12 @@ class _HomeState extends State<Home> {
             left: 20,
             child: CustomBottomNavigationBar(
               onPageChange: (int index) {
+                myPage?.jumpToPage(index);
                 setState(() {
-                  myPage?.jumpToPage(index);
+                  widget.selectedIndex = index;
                 });
               },
-              selectedIndex: 0,
+              selectedIndex: widget.selectedIndex,
             ),
           ),
         ],
