@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
   PageController? myPage;
   @override
   void initState() {
-    myPage = PageController(initialPage: 0);
+    myPage = PageController(initialPage: widget.selectedIndex);
     super.initState();
   }
 

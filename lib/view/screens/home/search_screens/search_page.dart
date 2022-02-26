@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_made/utilities/utilities.dart';
+import 'package:home_made/view/screens/home/search_screens/cream_cake.dart';
 import 'package:home_made/view/screens/home/home_screens/home_page.dart';
 import 'package:home_made/view/widgets/cards/custom_thing_container.dart';
 import 'package:home_made/view/widgets/input/custom_textfield.dart';
@@ -28,7 +29,7 @@ class _SearchPageState extends State<SearchPage> {
                   child: CustomTextfield(
                     hintText: "Search your product",
                     prefixIcon: Icons.search,
-                    primaryColor: ColorUtilities.greyColor,
+                    primaryColor: ColorUtilities.textColor,
                     textFieldFillColor: ColorUtilities.darkSlateGreyColor,
                   ),
                 ),
@@ -46,6 +47,12 @@ class _SearchPageState extends State<SearchPage> {
             Row(
               children: [
                 CustomThingContainer(
+                  onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return CreamCake();
+                    }));
+                  },
                   url:
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkYrMhrmNmkJlJYevS5mgJwgRZi6GozbFIyw&usqp=CAU",
                   price: "Rs.299.0",
@@ -53,6 +60,7 @@ class _SearchPageState extends State<SearchPage> {
                   thingName: "Cream Cakes",
                 ),
                 CustomThingContainer(
+                  onTap: () {},
                   url:
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDuVbvQZF1tYuHfgGIU2p9bcssV0U7wPNhMw&usqp=CAU",
                   price: "Rs.199.0",
@@ -64,6 +72,7 @@ class _SearchPageState extends State<SearchPage> {
             Row(
               children: [
                 CustomThingContainer(
+                  onTap: () {},
                   url:
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR_zeYdwWn2YGR4wTa4WIdlPb-NIHmng-eXg&usqp=CAU",
                   price: "Rs.399.0",
@@ -71,6 +80,7 @@ class _SearchPageState extends State<SearchPage> {
                   thingName: "Chocolates",
                 ),
                 CustomThingContainer(
+                  onTap: () {},
                   url:
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGy5KMNJz8xBnOfZcHLJR306yKUlV3LiUujA&usqp=CAU",
                   price: "Rs.450.0",
@@ -82,6 +92,7 @@ class _SearchPageState extends State<SearchPage> {
             Row(
               children: [
                 CustomThingContainer(
+                  onTap: () {},
                   url:
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7-x1NNa7FMH8S3k3cXaaE5JND3ryI_nn2hQ&usqp=CAU",
                   price: "Rs.99.0",
@@ -89,6 +100,7 @@ class _SearchPageState extends State<SearchPage> {
                   thingName: "Cup Cakes",
                 ),
                 CustomThingContainer(
+                  onTap: () {},
                   url:
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpR3dSoCdcdyc7SwYptmvADh5yjRdj0t3PfQ&usqp=CAU",
                   price: "Rs.79.0",
@@ -100,6 +112,7 @@ class _SearchPageState extends State<SearchPage> {
             Row(
               children: [
                 CustomThingContainer(
+                  onTap: () {},
                   url:
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdrLPHnh8xq1z1GQtnjN0pVE0jBZo4x-3Zw&usqp=CAU",
                   price: "Rs.99.0",
@@ -107,6 +120,7 @@ class _SearchPageState extends State<SearchPage> {
                   thingName: "Noodles",
                 ),
                 CustomThingContainer(
+                  onTap: () {},
                   url:
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJG5ZUmj0m64OJfrfkrH8kl4kCrak8dXkjw&usqp=CAU",
                   price: "Rs.199.0",
@@ -114,6 +128,9 @@ class _SearchPageState extends State<SearchPage> {
                   thingName: "Soup",
                 ),
               ],
+            ),
+            SizedBox(
+              height: 50,
             ),
           ],
         ),

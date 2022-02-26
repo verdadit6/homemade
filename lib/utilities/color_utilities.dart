@@ -14,6 +14,7 @@ class ColorUtilities {
   static const Color bottomNavigationBarIconColor = Color(0xff959699);
   static const Color darkYellowColor = Color(0xff2d2822);
   static const Color darkSlateGreyColor = Color(0xff252525);
-  static const Color greyColor = Color(0xff606060);
+  static const Color textColor = Color(0xffaeaeae);
   static const Color shopContainerColor = Color(0xff656565);
+  static const Color chipColor = Color(0xff342a35);
 }

@@ -20,53 +20,56 @@ class CustomBottomNavigationBar extends StatefulWidget {
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 55,
-      width: 380,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(40),
-        color: ColorUtilities.lightGreyColor,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          BottomNavigationBarIcon(
-            onPageChange: () {
-              widget.onPageChange(0);
-            },
-            selectedIndex: widget.selectedIndex,
-            pageIndex: 0,
-            icon: Icons.home_outlined,
-            iconName: "Home",
-          ),
-          BottomNavigationBarIcon(
-            onPageChange: () {
-              widget.onPageChange(1);
-            },
-            selectedIndex: widget.selectedIndex,
-            pageIndex: 1,
-            icon: Icons.search,
-            iconName: "Search",
-          ),
-          BottomNavigationBarIcon(
-            onPageChange: () {
-              widget.onPageChange(2);
-            },
-            selectedIndex: widget.selectedIndex,
-            pageIndex: 2,
-            icon: Icons.chat_bubble_outline,
-            iconName: "Chat",
-          ),
-          BottomNavigationBarIcon(
-            selectedIndex: widget.selectedIndex,
-            onPageChange: () {
-              widget.onPageChange(3);
-            },
-            pageIndex: 3,
-            icon: Icons.person_outline,
-            iconName: "Profile",
-          ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 15.0),
+      child: Container(
+        height: 50,
+        width: 380,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: ColorUtilities.lightGreyColor.withOpacity(0.8),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            BottomNavigationBarIcon(
+              onPageChange: () {
+                widget.onPageChange(0);
+              },
+              selectedIndex: widget.selectedIndex,
+              pageIndex: 0,
+              icon: Icons.home_outlined,
+              iconName: "Home",
+            ),
+            BottomNavigationBarIcon(
+              onPageChange: () {
+                widget.onPageChange(1);
+              },
+              selectedIndex: widget.selectedIndex,
+              pageIndex: 1,
+              icon: Icons.search,
+              iconName: "Search",
+            ),
+            BottomNavigationBarIcon(
+              onPageChange: () {
+                widget.onPageChange(2);
+              },
+              selectedIndex: widget.selectedIndex,
+              pageIndex: 2,
+              icon: Icons.chat_bubble_outline,
+              iconName: "Chat",
+            ),
+            BottomNavigationBarIcon(
+              selectedIndex: widget.selectedIndex,
+              onPageChange: () {
+                widget.onPageChange(3);
+              },
+              pageIndex: 3,
+              icon: Icons.person_outline,
+              iconName: "Profile",
+            ),
+          ],
+        ),
       ),
     );
   }

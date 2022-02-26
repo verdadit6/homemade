@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_made/utilities/color_utilities.dart';
 import 'package:home_made/view/screens/auth/login_screen.dart';
+import 'package:home_made/view/screens/home/home.dart';
 import 'package:home_made/view/screens/home/home_screens/home_page.dart';
 import 'package:home_made/view/widgets/button/custom_elevated_buttons.dart';
 import 'package:home_made/view/widgets/button/custom_text_button.dart';
@@ -73,7 +74,9 @@ started""",
             onPressed: () {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (BuildContext context) {
-                return HomePage();
+                return Home(
+                  selectedIndex: 0,
+                );
               }));
             },
           ),
